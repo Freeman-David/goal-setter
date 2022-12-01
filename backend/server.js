@@ -12,6 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/api/goals', require('./routs/goalRouts'));
+app.use('/api/users', require('./routs/userRouts'));
 
 app.use(errorHandler);
 
