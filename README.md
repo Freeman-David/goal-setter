@@ -1,2 +1,2 @@
 # goal-setter
-Goal setter app usint MERN stack.
+Goal setter app using MERN stack.
