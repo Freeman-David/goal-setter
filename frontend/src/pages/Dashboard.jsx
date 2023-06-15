@@ -37,7 +37,7 @@ function Dashboard() {
     <>
       <section className='heading'>
         <h1>Wellcome {user && user.name} </h1>
-        <p>Goals Dashboard</p>
+        <p>Saving Dashboard</p>
       </section>
 
       <GoalForm />
@@ -49,7 +49,7 @@ function Dashboard() {
               <GoalItem key={goal._id} goal={goal} />
             )}
           </div>
-        ) : (<h3> You have not set any goals</h3>)}
+        ) : (<h3>It's a great time to start your savings</h3>)}
       </section>
     </>
   )
