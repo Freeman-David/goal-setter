@@ -20,15 +20,15 @@ const setGoal = asyncHandler(async (req, res) => {
         throw new Error('Please add name');
     }
 
-    if (!req.body.goal) {
+    if (!req.body.amount) {
         res.status(400);
         throw new Error('Please add goal');
     }
 
     const goal = await Goal.create({
         name: req.body.name,
-        goal: req.body.goal,
-        amount: 0,
+        amount: req.body.amount,
+        saved: 0,
         user: req.user.id
     })
 

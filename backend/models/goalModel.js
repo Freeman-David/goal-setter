@@ -10,11 +10,11 @@ const goalSchema = mongoose.Schema({
         type: String,
         required: [true, 'Please add name']
     },
-    goal: {
+    amount: {
         type: Number,
         required: [true, 'Please add goal']
     },
-    amount: {
+    saved: {
         type: Number,
         default: 0
     }

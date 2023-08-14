@@ -38,11 +38,11 @@ export const getGoals = createAsyncThunk('goals/getAll', async (_, thunkAPI) => 
 });
 
 // Update goal
-export const updateGoal = createAsyncThunk('goals/update', async (id, thunkAPI) => {
+export const updateGoal = createAsyncThunk('goals/update', async (updatedGoal, thunkAPI) => {
     try {
         const token = thunkAPI.getState().auth.user.token;
 
-        return await goalService.updatedGoal(id, token);
+        return await goalService.updateGoal(updatedGoal, token);
     } catch (error) {
         const message = (error.response && error.response.data && 
             error.response.data.message) || error.message || error.toString();

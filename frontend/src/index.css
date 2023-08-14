@@ -9,6 +9,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
+  user-select: none;
 }
 
 a {
@@ -122,6 +123,7 @@ h3 {
 }
 
 .form-group input,
+.updateGoalForm input,
 .form-group textarea,
 .form-group select {
   width: 100%;
@@ -132,10 +134,17 @@ h3 {
   font-family: inherit;
 }
 
-.form-group label {
+.form-group label,
+.updateGoalForm label {
   text-align: left;
   display: block;
   margin: 0 0 5px 3px;
+}
+
+.updateGoalForm {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
 }
 
 .btn {
@@ -177,6 +186,11 @@ h3 {
   border-color: red;
 }
 
+.btn-update {
+  background-color: #317931;
+  border-color: #317931;
+}
+
 .btn svg {
   margin-right: 8px;
 }
@@ -195,7 +209,7 @@ h3 {
   transform: scale(0.99);
 }
 
-.addMoneyBtn {
+.editBtn {
   padding: 5px 20px;
   border: 1px solid #317931;
   border-radius: 5px;
